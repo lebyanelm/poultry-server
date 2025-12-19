@@ -30,6 +30,8 @@ __________________________________
 server_instance = Flask(__name__,
 			static_folder="./assets/",
             static_url_path="/server_name/assets/")
+server_instance.config["PROPAGATE_EXCEPTIONS"] = True
+server_instance.config["TRAP_HTTP_EXCEPTIONS"] = True
 CORS(server_instance, resources={r"*": {"origins": "*"}})
 
 
