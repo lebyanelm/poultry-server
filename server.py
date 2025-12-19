@@ -62,6 +62,14 @@ SERVER INSTANCE ROUTES
 __________________________________
 """
 # Update a cell of the flock sheet
+"""
+@server_instance.route("/status", methods=["GET"])
+@cross_origin()
+def status():
+	return {"status": "ok"}
+
+"""
+# Update a cell of the flock sheet
 @server_instance.route("/control/<control>/<value>", methods=["POST"])
 @cross_origin()
 def update_cell(control, value):
