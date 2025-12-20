@@ -47,6 +47,9 @@ sheet = gc.open("Flock controls").worksheet("Controls Panel")
 CELLS_MAP = {
 		# Flock cycle start date to count flock age
 		"flock_age": "B9",
+		"indoor_temperature": "G2",
+		"outdoor_temperature": "G3",
+		
 
 		# Heat lamp toggle states.
 		"heatlamps": "B3",
